@@ -723,3 +723,42 @@ a {
         font-size: 18px;
     }
 }
+
+/* AJUSTE COMPACTO DE LAS GALERÍAS */
+
+.gallery-carousel {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 18px;
+    gap: 12px;
+}
+
+.gallery-track {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 230px !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    font-size: 20px;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 650px) {
+    .gallery-carousel {
+        padding: 10px;
+        gap: 7px;
+    }
+
+    .gallery-track {
+        max-width: 100%;
+    }
+
+    .image-placeholder {
+        height: 190px !important;
+    }
+}
