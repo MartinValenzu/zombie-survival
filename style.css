@@ -844,85 +844,59 @@ a {
   .gallery-slide { animation: none; }
   .button, .gallery-arrow, .gallery-card { transition: none; }
 }
-/* ==============================
-   ZOMBIS DECORATIVOS LATERALES
-================================ */
+/* =========================================
+   13. ZOMBIS DECORATIVOS — PORTADA Y PROYECTO
+   No cubren el juego ni la galería y no usan posición fija
+========================================= */
+
+.hero,
+.about-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
 
 .side-zombie {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
+  position: absolute;
+  top: 53%;
   z-index: 1;
   pointer-events: none;
-  opacity: 0.26;
-  filter: drop-shadow(0 0 22px rgba(89, 222, 160, 0.18));
+  opacity: .36;
 }
 
 .side-zombie img {
   display: block;
-  width: 220px;
-  max-width: 22vw;
+  width: clamp(155px, 22vw, 310px);
+  max-width: none;
   height: auto;
+  filter: drop-shadow(0 0 15px rgba(89, 222, 160, .15));
 }
 
 .side-zombie-left {
-  left: 0;
+  left: -6%;
+  transform: translate(-20%, -50%);
 }
 
 .side-zombie-right {
-  right: 0;
+  right: -5%;
+  top: 55%;
+  transform: translate(20%, -50%);
+  opacity: .27;
 }
 
-.side-zombie-left img {
-  transform: translateX(-28%);
-}
-
-.side-zombie-right img {
-  transform: translateX(28%);
-}
-
-/* Para que el contenido quede por encima */
-main,
-header,
-footer,
-.hero,
-.game-section,
-.gallery-section,
-.about-section,
-.contact-section,
-.section {
+/* Mantiene los textos y elementos interactivos por encima del arte */
+.hero-content,
+.hero-art,
+.about-grid {
   position: relative;
   z-index: 2;
 }
 
-/* Opcional: fondo más vivo en toda la página */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 12% 30%, rgba(89, 222, 160, 0.08), transparent 28%),
-    radial-gradient(circle at 88% 40%, rgba(167, 139, 250, 0.08), transparent 30%),
-    radial-gradient(circle at 50% 85%, rgba(101, 200, 245, 0.05), transparent 30%);
-}
-
-/* Tablet */
 @media (max-width: 1100px) {
-  .side-zombie img {
-    width: 170px;
-    max-width: 20vw;
-  }
-
-  .side-zombie {
-    opacity: 0.20;
-  }
+  .side-zombie { opacity: .20; }
+  .side-zombie img { width: clamp(130px, 19vw, 225px); }
 }
 
-/* Celular */
 @media (max-width: 768px) {
-  .side-zombie {
-    display: none;
-  }
+  .side-zombie { display: none; }
 }
