@@ -37,11 +37,6 @@
     <!-- PORTADA -->
 
     <section class="hero" id="inicio">
-      <!-- Decoración temática; no corresponde a las imágenes reales del videojuego -->
-      <div class="side-zombie side-zombie-left" aria-hidden="true">
-        <img src="assets/img/Imagen de ChatGPT 10 nov 2026, 10_21_13-1.png" alt="" width="1024" height="1536" decoding="async">
-      </div>
-
       <div class="hero-content">
 
         <span class="eyebrow">
@@ -65,10 +60,17 @@
 
       </div>
 
-      <div class="hero-art">
-        <div class="moon"></div>
-        <div class="hero-symbol">☣</div>
-        <span class="hero-caption">COMIENZA LA SUPERVIVENCIA</span>
+      <!-- Ilustración en su propia columna: no se superpone al contenido -->
+      <div class="hero-art" aria-hidden="true">
+        <img
+          class="hero-zombie"
+          src="assets/img/Imagen de ChatGPT 10 nov 2026, 10_21_13-1.png"
+          alt=""
+          width="1024"
+          height="1536"
+          decoding="async"
+          fetchpriority="high"
+        >
       </div>
 
       <div class="hero-bottom">
