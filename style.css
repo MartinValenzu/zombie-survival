@@ -911,9 +911,16 @@ a {
   z-index: 1;
 }
 
-.hero-content,
-.hero-bottom {
+/* El texto de portada queda en el flujo normal.
+   Las etiquetas inferiores se anclan a la base del hero
+   y NO ocupan una tercera columna. */
+.hero-content {
   position: relative;
+  z-index: 3;
+}
+
+.hero-bottom {
+  position: absolute;
   z-index: 3;
 }
 
