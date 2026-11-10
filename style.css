@@ -845,77 +845,106 @@ a {
   .button, .gallery-arrow, .gallery-card { transition: none; }
 }
 /* =========================================
-   13. ZOMBIS DECORATIVOS — PORTADA Y PROYECTO
-   No cubren el juego ni la galería y no usan posición fija
+   13. PERSONAJES DECORATIVOS
+   El de portada está dentro del flujo de la página.
+   Nunca cubre textos, galería ni zona jugable.
 ========================================= */
 
-.hero,
+/* En la portada, contenido e ilustración ocupan columnas separadas. */
+.hero-content {
+  flex: 1 1 560px;
+  min-width: 0;
+}
+
+.hero-art {
+  position: relative;
+  z-index: 2;
+  flex: 0 1 390px;
+  width: min(32vw, 390px);
+  height: 465px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-zombie {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 20px rgba(89, 222, 160, .20));
+}
+
+/* El segundo zombi aparece en el apartado del proyecto,
+   detrás de su contenido y sin tocar las galerías. */
 .about-section {
   position: relative;
-  isolation: isolate;
   overflow: hidden;
+  isolation: isolate;
 }
 
-/* Personajes dentro de sus secciones, nunca fijos en pantalla */
-.side-zombie {
-  position: absolute;
-  pointer-events: none;
-}
-
-.side-zombie img {
-  display: block;
-  max-width: none;
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 0 18px rgba(89, 222, 160, .20));
-}
-
-/* Portada: el zombi se muestra completo a la derecha,
-   delante del círculo ornamental, sin cubrir el texto. */
-.hero .side-zombie-left {
-  left: auto;
-  right: clamp(55px, 11vw, 220px);
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 3;
-  opacity: .94;
-}
-
-.hero .side-zombie-left img {
-  width: clamp(290px, 25vw, 380px);
-  max-height: 520px;
-}
-
-/* Segundo personaje, decorativo y discreto en Acerca del proyecto */
 .about-section .side-zombie-right {
-  left: auto;
+  position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1;
-  opacity: .40;
+  z-index: 0;
+  opacity: .25;
+  pointer-events: none;
 }
 
 .about-section .side-zombie-right img {
-  width: clamp(230px, 24vw, 340px);
-  max-height: 500px;
+  display: block;
+  width: min(24vw, 300px);
+  height: auto;
+  filter: drop-shadow(0 0 15px rgba(89, 222, 160, .15));
 }
 
-/* Contenido legible y botones accesibles sobre las ilustraciones */
-.hero-content,
-.hero-art,
-.about-grid {
+.about-section .section-title,
+.about-section .about-grid {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .hero-content,
-.hero-bottom { z-index: 4; }
+.hero-bottom {
+  position: relative;
+  z-index: 3;
+}
 
-/* En monitores pequeños y móviles el diseño permanece limpio */
-@media (max-width: 1150px) {
-  .hero .side-zombie-left,
-  .about-section .side-zombie-right {
-    display: none;
+/* En pantallas medianas y pequeñas la imagen se coloca debajo
+   del texto, en lugar de competir por el mismo espacio. */
+@media (max-width: 1050px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
   }
+
+  .hero-content { flex: none; }
+
+  .hero-art {
+    align-self: center;
+    flex: none;
+    width: min(65vw, 330px);
+    height: 360px;
+  }
+
+  .about-section .side-zombie-right { display: none; }
+}
+
+@media (max-width: 650px) {
+  .hero-art {
+    width: min(64vw, 240px);
+    height: 285px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-zombie { transition: none; }
 }
