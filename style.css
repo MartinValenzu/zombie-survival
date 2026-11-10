@@ -1060,3 +1060,40 @@ a {
     display: none;
   }
 }
+
+/* =========================================
+   15. EMOJIS TEMÁTICOS DECORATIVOS
+   Sin movimiento ni imágenes adicionales
+========================================= */
+
+.section-emoji {
+  display: inline-grid;
+  place-items: center;
+  vertical-align: middle;
+  width: 1.75em;
+  height: 1.75em;
+  margin-right: .35em;
+  border: 1px solid rgba(101, 200, 245, .24);
+  border-radius: .55em;
+  background: linear-gradient(135deg, rgba(89, 222, 160, .12), rgba(167, 139, 250, .13));
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 1.2em;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: 1;
+  text-shadow: none;
+  user-select: none;
+}
+
+.eyebrow .section-emoji,
+.section-label .section-emoji {
+  font-size: 1.55em;
+}
+
+.gallery-title h3 .section-emoji {
+  font-size: .8em;
+}
+
+@media (max-width: 650px) {
+  .section-emoji { margin-right: .25em; }
+}
