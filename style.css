@@ -15,8 +15,8 @@ html {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #080d1b;
-  color: #f1f5f9;
+  background: #071410;
+  color: #effff6;
   line-height: 1.6;
 }
 
@@ -37,7 +37,7 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 25px;
-  background: #0b1120;
+  background: #0a1b17;
   border-bottom: 1px solid rgba(255,255,255,0.07);
 }
 
@@ -48,7 +48,7 @@ a {
 }
 
 .logo span {
-  color: #8b5cf6;
+  color: #6de6ad;
 }
 
 .header nav {
@@ -57,7 +57,7 @@ a {
 }
 
 .header nav a {
-  color: #aab8d2;
+  color: #b0cbc2;
   font-size: 13px;
   transition: color 0.3s;
 }
@@ -91,17 +91,10 @@ a {
   overflow: hidden;
 
   background:
-    radial-gradient(
-      ellipse at 80% 45%,
-      rgba(139,92,246,0.17),
-      transparent 40%
-    ),
-    radial-gradient(
-      ellipse at 15% 20%,
-      rgba(34,197,94,0.07),
-      transparent 35%
-    ),
-    linear-gradient(120deg,#10182c,#080d1b);
+    radial-gradient(ellipse at 85% 35%, rgba(167,139,250,0.20), transparent 42%),
+    radial-gradient(ellipse at 15% 75%, rgba(89,222,160,0.17), transparent 50%),
+    radial-gradient(ellipse at 75% 90%, rgba(101,200,245,0.09), transparent 36%),
+    linear-gradient(120deg, #0d261d, #071410);
 }
 
 .hero-content {
@@ -131,7 +124,7 @@ a {
 
 .hero-content > p:not(.eyebrow) {
   max-width: 490px;
-  color: #aab8d2;
+  color: #b0cbc2;
   font-size: 15px;
   margin-bottom: 32px;
 }
@@ -140,7 +133,7 @@ a {
   display: inline-block;
   padding: 14px 23px;
   border-radius: 8px;
-  background: linear-gradient(100deg,#596dff,#8955ed);
+  background: linear-gradient(100deg,#20a878,#8463dc);
   color: white;
   font-size: 12px;
   font-weight: bold;
@@ -150,7 +143,7 @@ a {
 
 .button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(99,102,241,0.3);
+  box-shadow: 0 10px 30px rgba(82,220,160,0.28);
 }
 
 
@@ -173,7 +166,7 @@ a {
   position: relative;
 
   background:
-    radial-gradient(circle,#25213d,#10182c 70%);
+    radial-gradient(circle,#1b382e,#0d241e 70%);
 }
 
 .moon {
@@ -192,7 +185,7 @@ a {
   width: 95px;
   height: 95px;
   border-radius: 50%;
-  background: #25213d;
+  background: #1b382e;
   left: 28px;
   top: -15px;
 }
@@ -206,7 +199,7 @@ a {
 .hero-caption {
   position: absolute;
   bottom: 45px;
-  color: #94a3b8;
+  color: #a5beb8;
   font-size: 9px;
   letter-spacing: 3px;
 }
@@ -218,7 +211,7 @@ a {
   right: 10%;
   display: flex;
   justify-content: space-between;
-  color: #64748b;
+  color: #8ba6a0;
   font-size: 9px;
   letter-spacing: 2px;
 }
@@ -240,7 +233,7 @@ a {
 }
 
 .section-title > p:last-child {
-  color: #94a3b8;
+  color: #a5beb8;
   font-size: 14px;
 }
 
@@ -258,9 +251,9 @@ a {
   aspect-ratio: 16 / 9;
   min-height: 320px;
   overflow: hidden;
-  border: 1px solid #293653;
+  border: 1px solid #315249;
   border-radius: 14px;
-  background: #050914;
+  background: #06150f;
   box-shadow: 0 20px 55px rgba(0,0,0,0.25);
 }
 
@@ -279,7 +272,7 @@ a {
   background:
     radial-gradient(
       circle,
-      rgba(99,102,241,0.14),
+      rgba(63,211,149,0.18),
       transparent 65%
     );
 }
@@ -296,7 +289,7 @@ a {
 
 .game-placeholder p {
   max-width: 450px;
-  color: #94a3b8;
+  color: #a5beb8;
   font-size: 14px;
 }
 
@@ -315,7 +308,7 @@ a {
   justify-content: space-between;
   gap: 15px;
   margin-top: 14px;
-  color: #64748b;
+  color: #8ba6a0;
   font-size: 10px;
   letter-spacing: 1px;
 }
@@ -327,7 +320,7 @@ a {
 
 .about-section {
   padding: 90px 10%;
-  background: #0c1425;
+  background: #0b1d17;
 }
 
 .about-grid {
@@ -342,7 +335,7 @@ a {
 }
 
 .about-description p {
-  color: #aab8d2;
+  color: #b0cbc2;
   font-size: 14px;
   margin-bottom: 17px;
 }
@@ -358,12 +351,12 @@ a {
   gap: 20px;
   padding: 20px;
   border-radius: 10px;
-  background: #121d32;
+  background: #11271e;
   border: 1px solid rgba(255,255,255,0.06);
 }
 
 .feature > span {
-  color: #8b9dff;
+  color: #6ce5b1;
   font-size: 22px;
   font-weight: bold;
 }
@@ -374,7 +367,7 @@ a {
 }
 
 .feature p {
-  color: #94a3b8;
+  color: #a5beb8;
   font-size: 12px;
 }
 
@@ -394,7 +387,7 @@ a {
 }
 
 .gallery-card {
-  background: #111a2d;
+  background: #12251f;
   border: 1px solid rgba(255,255,255,0.07);
   border-radius: 12px;
   overflow: hidden;
@@ -426,13 +419,13 @@ a {
 }
 
 .gallery-art span {
-  color: #8b9dff;
+  color: #6ce5b1;
   font-size: 10px;
   letter-spacing: 3px;
 }
 
 .gallery-art strong {
-  color: #e2e8f0;
+  color: #e2f9eb;
   font-size: 45px;
 }
 
@@ -443,7 +436,7 @@ a {
 
 .gallery-card p {
   padding: 0 17px 18px;
-  color: #94a3b8;
+  color: #a5beb8;
   font-size: 12px;
 }
 
@@ -460,12 +453,12 @@ a {
   align-items: center;
   gap: 20px;
 
-  background: #0b1120;
+  background: #0a1b17;
   border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 .footer p {
-  color: #64748b;
+  color: #8ba6a0;
   font-size: 12px;
 }
 
@@ -608,15 +601,15 @@ a {
 }
 
 .gallery-title p {
-    color: #91a9c9;
+    color: #a4c1ba;
 }
 
 .gallery-carousel {
     display: flex;
     align-items: center;
     gap: 18px;
-    background: #101a2d;
-    border: 1px solid #26344d;
+    background: #11251f;
+    border: 1px solid #335b51;
     border-radius: 16px;
     padding: 25px;
 }
@@ -642,17 +635,17 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #151e35, #211d43);
-    border: 1px dashed #765bce;
+    background: linear-gradient(135deg, #123126, #292143);
+    border: 1px dashed #9371e8;
     border-radius: 12px;
-    color: #a98aff;
+    color: #b69aff;
     font-size: 25px;
     font-weight: bold;
     letter-spacing: 4px;
 }
 
 .gif-placeholder {
-    background: linear-gradient(135deg, #101e2b, #202044);
+    background: linear-gradient(135deg, #0e3029, #2c2350);
 }
 
 .gallery-slide h4 {
@@ -661,7 +654,7 @@ a {
 }
 
 .gallery-slide p {
-    color: #91a9c9;
+    color: #a4c1ba;
     margin-bottom: 5px;
 }
 
@@ -669,9 +662,9 @@ a {
     flex-shrink: 0;
     width: 45px;
     height: 45px;
-    border: 1px solid #765bce;
+    border: 1px solid #9371e8;
     border-radius: 50%;
-    background: #1b2140;
+    background: #1b2d38;
     color: white;
     font-size: 18px;
     cursor: pointer;
@@ -679,14 +672,14 @@ a {
 }
 
 .gallery-arrow:hover {
-    background: #765bce;
+    background: #9371e8;
     transform: scale(1.08);
 }
 
 .gallery-counter {
     text-align: center;
     margin-top: 15px;
-    color: #a98aff;
+    color: #b69aff;
     font-size: 12px;
     letter-spacing: 3px;
 }
@@ -761,4 +754,93 @@ a {
     .image-placeholder {
         height: 220px !important;
     }
+}
+
+
+/* =========================================
+   12. PALETA ZOMBIE SURVIVAL
+   Verde principal · morado secundario · azul de acento
+   Sin capas fijas ni efectos que ralenticen el scroll
+========================================= */
+
+:root {
+  color-scheme: dark;
+  --zs-green: #59dea0;
+  --zs-purple: #a78bfa;
+  --zs-blue: #65c8f5;
+  --zs-border: rgba(112, 220, 169, .20);
+}
+
+.header,
+.footer { border-color: var(--zs-border); }
+
+.header nav a:hover,
+.footer > a:last-child:hover { color: var(--zs-blue); }
+
+.hero h1 span {
+  background: linear-gradient(95deg, #73efad, #b192ff 72%, #6fc5ff);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.button {
+  background: linear-gradient(110deg, #208f69, #4c8fae 43%, #7955d3);
+}
+
+.button:focus-visible,
+.header nav a:focus-visible,
+.gallery-arrow:focus-visible,
+.footer a:focus-visible {
+  outline: 2px solid var(--zs-green);
+  outline-offset: 4px;
+}
+
+.game-section {
+  background: linear-gradient(180deg, #071410 0%, #0a1e18 100%);
+}
+
+.game-screen,
+.gallery-carousel,
+.feature { border-color: var(--zs-border); }
+
+.game-placeholder {
+  background:
+    radial-gradient(circle at 36% 40%, rgba(89,222,160,.14), transparent 55%),
+    radial-gradient(circle at 72% 65%, rgba(167,139,250,.10), transparent 50%);
+}
+
+.gallery-section {
+  background:
+    radial-gradient(ellipse at 10% 40%, rgba(101,200,245,.055), transparent 45%),
+    linear-gradient(180deg, #071410, #0a1b17);
+}
+
+.gallery-section .section-label,
+.gallery-category .section-label { color: var(--zs-green); }
+
+.gallery-section .section-heading {
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+.gallery-section .section-heading h2 {
+  font-size: clamp(26px,4vw,38px);
+  line-height: 1.2;
+  margin: 8px 0 12px;
+}
+
+.gallery-section .section-heading p { color: #a4c1ba; }
+
+.gallery-arrow:hover {
+  background: #317d79;
+  border-color: var(--zs-blue);
+}
+
+.gallery-arrow:active { transform: scale(.98); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .gallery-slide { animation: none; }
+  .button, .gallery-arrow, .gallery-card { transition: none; }
 }
