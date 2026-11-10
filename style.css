@@ -856,35 +856,52 @@ a {
   overflow: hidden;
 }
 
+/* Personajes dentro de sus secciones, nunca fijos en pantalla */
 .side-zombie {
   position: absolute;
-  top: 53%;
-  z-index: 1;
   pointer-events: none;
-  opacity: .36;
 }
 
 .side-zombie img {
   display: block;
-  width: clamp(155px, 22vw, 310px);
   max-width: none;
   height: auto;
-  filter: drop-shadow(0 0 15px rgba(89, 222, 160, .15));
+  object-fit: contain;
+  filter: drop-shadow(0 0 18px rgba(89, 222, 160, .20));
 }
 
-.side-zombie-left {
-  left: -6%;
-  transform: translate(-20%, -50%);
+/* Portada: el zombi se muestra completo a la derecha,
+   delante del círculo ornamental, sin cubrir el texto. */
+.hero .side-zombie-left {
+  left: auto;
+  right: clamp(55px, 11vw, 220px);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  opacity: .94;
 }
 
-.side-zombie-right {
-  right: -5%;
-  top: 55%;
-  transform: translate(20%, -50%);
-  opacity: .27;
+.hero .side-zombie-left img {
+  width: clamp(290px, 25vw, 380px);
+  max-height: 520px;
 }
 
-/* Mantiene los textos y elementos interactivos por encima del arte */
+/* Segundo personaje, decorativo y discreto en Acerca del proyecto */
+.about-section .side-zombie-right {
+  left: auto;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  opacity: .40;
+}
+
+.about-section .side-zombie-right img {
+  width: clamp(230px, 24vw, 340px);
+  max-height: 500px;
+}
+
+/* Contenido legible y botones accesibles sobre las ilustraciones */
 .hero-content,
 .hero-art,
 .about-grid {
@@ -892,11 +909,13 @@ a {
   z-index: 2;
 }
 
-@media (max-width: 1100px) {
-  .side-zombie { opacity: .20; }
-  .side-zombie img { width: clamp(130px, 19vw, 225px); }
-}
+.hero-content,
+.hero-bottom { z-index: 4; }
 
-@media (max-width: 768px) {
-  .side-zombie { display: none; }
+/* En monitores pequeños y móviles el diseño permanece limpio */
+@media (max-width: 1150px) {
+  .hero .side-zombie-left,
+  .about-section .side-zombie-right {
+    display: none;
+  }
 }
